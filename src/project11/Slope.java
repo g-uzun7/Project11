@@ -9,7 +9,8 @@ package project11;
  * @author bipleash
  */
 public class Slope {
-    private int x1,x2,y1,y2;
+
+    private int x1, x2, y1, y2;
     private double _slope;
 
     public Slope(int x1, int x2, int y1, int y2) {
@@ -50,12 +51,10 @@ public class Slope {
     public void setY2(int y2) {
         this.y2 = y2;
     }
-    
-    public void SlopePoints(){
-        _slope=(y2-y1)/(x2-x1);
+
+    public void SlopePoints() {
+        _slope = (y2 - y1) / (x2 - x1);
         System.out.println(_slope);
         //return _slope;
     }
-
-    
 }
