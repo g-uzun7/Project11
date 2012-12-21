@@ -18,7 +18,9 @@ public class Project11 {
     public static void main(String[] args) {
         int n;
         int sayi1,sayi2,sayi3,sayi4;
+        String _EQ;
         Scanner myScanner=new Scanner(System.in);
+        
         
   
         do{
@@ -46,7 +48,10 @@ public class Project11 {
                     
                 case 3:
                     //slope of line 
-                    
+                    System.out.println("Enter equation:");
+                    _EQ=myScanner.next();
+                    SlopeEq myEq=new SlopeEq(_EQ);
+                    System.out.printf("%s\n",myEq.EqAnalyzer());
                     break;
                     
                 case 4:
