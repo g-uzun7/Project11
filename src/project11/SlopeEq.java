@@ -11,22 +11,23 @@ import java.util.Scanner;
  * @author bipleash
  */
 public class SlopeEq {
-    
-    String _formula;
-    String myChar;
-    Scanner moiScanner=new Scanner(_formula);
-    char obo;
-    boolean isEqual;
+
+    private String _formula;
+    private String myChar;
+    private Scanner moiScanner = new Scanner(_formula);
+    private boolean isEqual;
     int mylength = _formula.length();
-    for(int k=0;k<mylength;k++){
-        obo=moiScanner.substring(k);
-        //obo=moiScanner.next(k);
-        isEqual=char(obo).equals('x');
-        if(isEqual){
-            
+    //private int k;
+    private String obo;
+    String a = new String("x");
+
+    public void EqAnalyzer() {
+        for (k = 0; k < _formula; k++) {
+            obo = moiScanner.substring(k);
+            //obo=moiScanner.next(k);
+            isEqual = "x".equals(obo);
+            if (isEqual) {
+            }
         }
-
-
-}
-    
+    }
 }
