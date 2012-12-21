@@ -4,9 +4,7 @@
  */
 package project11;
 
-import com.sun.j3d.utils.behaviors.interpolators.KBCubicSplineCurve;
 import java.util.Scanner;
-import sun.security.util.Length;
 
 /**
  *
@@ -17,12 +15,14 @@ public class SlopeEq {
     String _formula;
     String myChar;
     Scanner moiScanner=new Scanner(_formula);
-    String obo;
+    char obo;
+    boolean isEqual;
     int mylength = _formula.length();
     for(int k=0;k<mylength;k++){
         obo=moiScanner.substring(k);
         //obo=moiScanner.next(k);
-        if(String("obo").equals("x")){
+        isEqual=char(obo).equals('x');
+        if(isEqual){
             
         }
 
