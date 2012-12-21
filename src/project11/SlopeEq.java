@@ -31,10 +31,9 @@ public class SlopeEq {
             obo = _formula.substring(k);
             if ("x".equals(obo)) {
                 System.out.println("OK");
-                for (int l = k; l > 0; k--) {
+                for (int l = k-1; l > 1; l--) {
                     obo = _formula.substring(l);
-                    System.out.println(k);
-                    SlopStr[k] = obo;
+                    SlopStr[l] = obo;
                     if ("=".equals(obo)) {
                         break;
                     }
@@ -42,7 +41,12 @@ public class SlopeEq {
             }
         }
         for (int u = 0; u < SlopStr.length; u++) {
-            System.out.printf("%s", SlopStr[u]);
+            //System.out.printf("%s", SlopStr[u]);
+            if("null".equals(SlopStr[u])){
+                
+            }else{
+                System.out.println(SlopStr[u]);
+            }
         }
         return 0;
     }
