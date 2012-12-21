@@ -41,10 +41,12 @@ public class Project11 {
                     break;
                 case 2:
                     //co-linear points
+                    
                     break;
                     
                 case 3:
                     //slope of line 
+                    
                     break;
                     
                 case 4:
