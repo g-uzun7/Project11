@@ -15,6 +15,7 @@ public class Project11 {
     /**
      * @param args the command line arguments
      */
+    @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         int n;
         int sayi1, sayi2, sayi3, sayi4;
@@ -24,10 +25,11 @@ public class Project11 {
 
 
         do {
-            System.out.println("Math Problem Solver \n 1.Find the slope of a line from points \n 2.Check your points co-linear or not\n3.Find the slope of a line given by equation");
-            System.out.println("4.Find the slope of a line perpendicular to your line");
-            System.out.println("5.Test your points triangularity");
-            //EDIT HERE
+            String[] _MENU = {"Math Problem Solver", "1.Find the slope of a line from points", "2.Check your points co-linear or not", "3.Find the slope of a line given by equation", "4.Find the slope of a line perpendicular to your line", "5.Test your points triangularity", "6.Exit"};
+            //MENU WRITTEN IN TO ARRAY
+            for (int i = 0; i < 7; i++) {
+                System.out.println(_MENU[i]);
+            }
             System.out.println("Make your choice:");
             n = myScanner.nextInt();
             switch (n) {
@@ -56,6 +58,10 @@ public class Project11 {
 
                 case 4:
                     //slope of perpendicular line
+                    System.out.println("Enter equation:");
+                    _EQ=myScanner.next();
+                    SlopePerp myPerpSlope=new SlopePerp(_EQ);
+                    System.out.printf("%s\n",myPerpSlope.CalcPerpSlope());
                     break;
                 case 5:
                     //triangle

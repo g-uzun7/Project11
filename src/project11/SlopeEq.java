@@ -12,10 +12,11 @@ package project11;
 public class SlopeEq {
 
     private String _formula;
-    char[] SlopChr=new char[10];
+    char[] SlopChr = new char[10];
     private String obo;
     float number;
-    
+    char oba;
+
     public SlopeEq(String _formula) {
         this._formula = _formula;
     }
@@ -28,19 +29,19 @@ public class SlopeEq {
 
     public float EqAnalyzer() {
         for (int k = 0; k < _formula.length(); k++) {
-            char oba = _formula.charAt(k);//read char at k
-            if ('x'==oba) {//checks whether x equal char at k in formula
-                for (int l = k-1; l > 1; l--) {
+            oba = _formula.charAt(k);//read char at k
+            if ('x' == oba) {//checks if x equal to char at k in formula
+                for (int l = k - 1; l > 1; l--) {
                     oba = _formula.charAt(l);
                     SlopChr[l] = oba;
-                    if ('='==oba) {
+                    if ('=' == oba) {
                         break;
                     }
                 }
             }
         }
         /*
-         * This part prints slope.
+         * This part converts string to float and return that value.
          */
         String myEquation = new String(SlopChr);
         obo = myEquation;
