@@ -12,10 +12,11 @@ package project11;
 public class SlopeEq {
 
     private String _formula;
-    char[] SlopChr = new char[10];
+    private char[] SlopChr = new char[10];
     private String obo;
-    float number;
-    char oba;
+    private float number;
+    private char oba;
+    private boolean isX = false;
 
     public SlopeEq(String _formula) {
         this._formula = _formula;
@@ -31,6 +32,7 @@ public class SlopeEq {
         for (int k = 0; k < _formula.length(); k++) {
             oba = _formula.charAt(k);//read char at k
             if ('x' == oba) {//checks if x equal to char at k in formula
+                isX = true;
                 for (int l = k - 1; l > 1; l--) {
                     oba = _formula.charAt(l);
                     SlopChr[l] = oba;
@@ -41,11 +43,16 @@ public class SlopeEq {
             }
         }
         /*
-         * This part converts string to float and return that value.
+         * This part checks isX and converts string to float and return that value.
          */
-        String myEquation = new String(SlopChr);
-        obo = myEquation;
-        number = Float.parseFloat(obo);
-        return number;
+        if (isX) {
+            String myEquation = new String(SlopChr);
+            obo = myEquation;
+            number = Float.parseFloat(obo);
+            return number;
+        } else {
+            System.out.println("Please enter a valid equation(You forgot x)");
+            return 0;
+        }
     }
 }//END

@@ -23,12 +23,12 @@ public class SlopePerp {
 
     private float _SlopeGetter() {
         SlopeEq gSlope = new SlopeEq(myEquation);
-        _Slope=gSlope.EqAnalyzer();
+        _Slope = gSlope.EqAnalyzer();
         return _Slope;
     }
 
     public float CalcPerpSlope() {
-        moiSlope=_SlopeGetter();
+        moiSlope = _SlopeGetter();
         PerpSlope = (-1) / moiSlope;
         return PerpSlope;
     }

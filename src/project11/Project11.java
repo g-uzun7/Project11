@@ -15,17 +15,15 @@ public class Project11 {
     /**
      * @param args the command line arguments
      */
-    @SuppressWarnings("empty-statement")
+    //@SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         int n;
         int sayi1, sayi2, sayi3, sayi4;
         String _EQ;
         Scanner myScanner = new Scanner(System.in);
 
-
-
         do {
-            String[] _MENU = {"Math Problem Solver", "1.Find the slope of a line from points", "2.Check your points co-linear or not", "3.Find the slope of a line given by equation", "4.Find the slope of a line perpendicular to your line", "5.Test your points triangularity", "6.Exit"};
+            String[] _MENU = {"Math Problem Solver", "1.Find the slope of a line from points", "2.Check your points co-linear or not", "3.Find the slope of a line given by equation", "4.Find the slope of a line perpendicular to your line", "5.Test your points triangularity", "0.Exit"};
             //MENU WRITTEN IN TO ARRAY
             for (int i = 0; i < 7; i++) {
                 System.out.println(_MENU[i]);
@@ -59,21 +57,22 @@ public class Project11 {
                 case 4:
                     //slope of perpendicular line
                     System.out.println("Enter equation:");
-                    _EQ=myScanner.next();
-                    SlopePerp myPerpSlope=new SlopePerp(_EQ);
-                    System.out.printf("%s\n",myPerpSlope.CalcPerpSlope());
+                    _EQ = myScanner.next();
+                    SlopePerp myPerpSlope = new SlopePerp(_EQ);
+                    System.out.printf("%s\n", myPerpSlope.CalcPerpSlope());
                     break;
                 case 5:
                     //triangle
                     break;
-                case 6:
+                case 0:
                     //exit
                     break;
                 default:
+                    System.out.println("I don't want to play a game, make a valid choice!");
                     break;
             }
 
 
-        } while (n != 6);
+        } while (n != 0);
     }
 }
