@@ -43,7 +43,8 @@ public class Project11 {
                     break;
                 case 2:
                     //co-linear points
-
+                    CoLinear myCoLinearCheck=new CoLinear();
+                    myCoLinearCheck.PointGetter();
                     break;
 
                 case 3:
